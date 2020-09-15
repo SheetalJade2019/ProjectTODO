@@ -1,0 +1,34 @@
+{% extends 'authApp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="jumbotron bg-secondary text-light">
+      <div class="container text-center">
+        <h1 class="display-4">Welcome To Todo App</h1>
+        <p class="lead">Add Your Task Here</p>
+      </div>
+    </div>
+    <div class="container container-fluid px-5">
+          <ol class="px-5">
+              {% for todo in todoitem %}
+                  <li class="font-weight-bold">
+                      {{todo.task}}
+                      <form class="" action="/deleteTodo/{{todo.id}}/" method="post">
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-danger btn-sm" name="delete" value="Delete">
+                      </form>
+                  </li>
+                  <br>
+                  {% endfor %}
+                  <li class="font-weight-bold">
+                      <form class="" action="/addTodo/" method="post">
+                          {% csrf_token %}
+                          <input type="text" name="task" placeholder="Enter New Task Here">
+                          <input type="submit" class="btn btn-primary btn-sm" name="add" value="Add">
+                      </form>
+                  </li>
+            </ol>
+      </div>
+
+{% endblock content %}

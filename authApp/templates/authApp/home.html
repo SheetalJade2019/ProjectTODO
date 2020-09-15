@@ -1,0 +1,25 @@
+{% extends 'authApp/base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="homepara">
+    <h1 class="text-center">Home</h1>
+    <p></p>
+      <p></p>
+
+      <div class="container ">
+               <h4 class="text-center bg-warning py-2 ">
+                 <a href="{% url 'register' %}">Want To Become A Member?</a>
+                 <br>
+                 <a href="{% url 'login' %}">Want To Login?</a>
+               </h4>
+          </div>
+      </div>
+
+  </div>
+
+</div>
+
+
+{% endblock content %}

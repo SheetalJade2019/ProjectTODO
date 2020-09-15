@@ -1,0 +1,12 @@
+body{
+  background-color: grey;
+}
+
+.login{
+  text-align: center;
+  padding-top: 1.5cm;
+}
+.register{
+  text-align: center;
+  padding-top: 1.5cm;
+}
