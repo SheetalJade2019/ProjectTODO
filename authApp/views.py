@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from .models import Todo
 #from collections.forms import ContactForm
 # Create your views here.
+# comment added
 
 def home(request):
     return render(request,"authApp/home.html")
